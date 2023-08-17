@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   dateSubtitle: {},
   dateIcon: {
-    backgroundColor: "white",
+    backgroundColor: "#e6e6e6",
     borderRadius: 50,
     padding: 10,
   },
