@@ -2,10 +2,11 @@ import { useState } from "react";
 import { View, StyleSheet } from "react-native";
 
 import CategoriesHeader from "../components/categories/Header";
-import { Colors } from "../constants/colors";
-import { categoriesMode } from "../constants/categoriesMode";
 import CategoriesChart from "../components/categories/Chart";
 import CategoriesList from "../components/categories/List";
+
+import { Colors } from "../constants/colors";
+import { categoriesMode } from "../constants/categoriesMode";
 
 const Categories = () => {
   const [mode, setMode] = useState(categoriesMode.CHART);

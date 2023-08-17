@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { ScrollView, StyleSheet, Platform } from "react-native";
+
 import Header from "./components/Header";
 import { Colors } from "./constants/colors";
 import Categories from "./screens/Categories";
