@@ -29,11 +29,11 @@ const Header = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 23,
+    padding: 24,
     backgroundColor: Colors.secondaryDark,
     elevation: 4,
     borderRadius: 8,
-    gap: 12,
+    marginBottom: 16,
   },
   header: {
     gap: 16,
