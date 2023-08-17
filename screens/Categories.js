@@ -4,6 +4,8 @@ import { View, StyleSheet } from "react-native";
 import CategoriesHeader from "../components/categories/Header";
 import { Colors } from "../constants/colors";
 import { categoriesMode } from "../constants/categoriesMode";
+import CategoriesChart from "../components/categories/Chart";
+import CategoriesList from "../components/categories/List";
 
 const Categories = () => {
   const [mode, setMode] = useState(categoriesMode.CHART);
@@ -13,9 +15,18 @@ const Categories = () => {
       mode === categoriesMode.CHART ? categoriesMode.LIST : categoriesMode.CHART
     );
 
+  const renderCategories = () => {
+    return mode === categoriesMode.CHART ? (
+      <CategoriesChart />
+    ) : (
+      <CategoriesList />
+    );
+  };
+
   return (
     <View style={styles.container}>
       <CategoriesHeader onSwitchModeHandler={switchModeHandler} mode={mode} />
+      <View style={styles.categories}>{renderCategories()}</View>
     </View>
   );
 };
@@ -25,6 +36,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.mediumDark,
     padding: 24,
+  },
+  categories: {
+    marginVertical: 8,
   },
 });
 
