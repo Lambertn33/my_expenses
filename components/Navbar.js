@@ -1,6 +1,5 @@
-import { TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "./UI/Icon";
-import { View, StyleSheet } from "react-native";
 
 const Navbar = () => {
   return (
@@ -19,6 +18,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     justifyContent: "space-between",
+    marginBottom: 16,
   },
 });
 
