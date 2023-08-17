@@ -1,14 +1,19 @@
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "./UI/Icon";
+import { Colors } from "../constants/colors";
 
 const Navbar = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
-        <Icon color="gray" size={32} icon="arrow-back" />
+        <Icon color={Colors.primaryLight} size={32} icon="arrow-back" />
       </TouchableOpacity>
       <TouchableOpacity>
-        <Icon color="gray" size={32} icon="ellipsis-horizontal" />
+        <Icon
+          color={Colors.primaryLight}
+          size={32}
+          icon="ellipsis-horizontal"
+        />
       </TouchableOpacity>
     </View>
   );
