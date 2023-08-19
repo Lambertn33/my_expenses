@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
 
-const CategoriesList = () => {
+const CategoriesList = ({ categories }) => {
   return (
     <View>
-      <Text style={styles.title}>Categories List</Text>
+      
     </View>
   );
 };

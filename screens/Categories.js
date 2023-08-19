@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { View, StyleSheet } from "react-native";
 
+import { useSelector } from "react-redux";
+
 import CategoriesHeader from "../components/categories/Header";
 import CategoriesChart from "../components/categories/Chart";
 import CategoriesList from "../components/categories/List";
@@ -10,7 +12,7 @@ import { categoriesMode } from "../constants/categoriesMode";
 
 const Categories = () => {
   const [mode, setMode] = useState(categoriesMode.CHART);
-
+  const { categoriesData } = useSelector((state) => state.categories);
   const switchModeHandler = () =>
     setMode(
       mode === categoriesMode.CHART ? categoriesMode.LIST : categoriesMode.CHART
@@ -20,13 +22,17 @@ const Categories = () => {
     return mode === categoriesMode.CHART ? (
       <CategoriesChart />
     ) : (
-      <CategoriesList />
+      <CategoriesList categories={categoriesData} />
     );
   };
 
   return (
     <View style={styles.container}>
-      <CategoriesHeader onSwitchModeHandler={switchModeHandler} mode={mode} />
+      <CategoriesHeader
+        onSwitchModeHandler={switchModeHandler}
+        mode={mode}
+        categoriesCount={categoriesData.length}
+      />
       <View style={styles.categories}>{renderCategories()}</View>
     </View>
   );

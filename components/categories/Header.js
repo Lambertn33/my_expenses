@@ -3,12 +3,12 @@ import { Colors } from "../../constants/colors";
 import { categoriesMode } from "../../constants/categoriesMode";
 import HeaderIcon from "./HeaderIcon";
 
-const CategoriesHeader = ({ onSwitchModeHandler, mode }) => {
+const CategoriesHeader = ({ onSwitchModeHandler, mode, categoriesCount }) => {
   return (
     <View style={styles.container}>
       <View>
         <Text style={styles.headerTitle}>Categories</Text>
-        <Text style={styles.headerSubtitle}>4 total</Text>
+        <Text style={styles.headerSubtitle}>{categoriesCount} total</Text>
       </View>
       <View style={styles.iconsContainer}>
         <HeaderIcon
