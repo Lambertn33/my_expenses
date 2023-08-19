@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { View, StyleSheet } from "react-native";
-
 import { useSelector } from "react-redux";
 
 import CategoriesHeader from "../components/categories/Header";
@@ -41,6 +40,7 @@ const Categories = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    gap: 12,
     backgroundColor: Colors.mediumDark,
     padding: 24,
   },
