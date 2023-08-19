@@ -4,6 +4,10 @@ import Icon from "./UI/Icon";
 import { Colors } from "../constants/colors";
 
 const Header = () => {
+  const options = { day: "numeric", month: "long", year: "numeric" };
+  const formattedDate = new Intl.DateTimeFormat("en-US", options).format(
+    new Date()
+  );
   return (
     <View style={styles.container}>
       <Navbar />
@@ -17,8 +21,8 @@ const Header = () => {
             <Icon color={Colors.primaryLight} size={20} icon="calendar" />
           </View>
           <View>
-            <Text style={styles.dateTitle}>07 Feb, 2019</Text>
-            <Text style={styles.dateSubtitle}>more than last month</Text>
+            <Text style={styles.dateTitle}>{formattedDate}</Text>
+            <Text style={styles.dateSubtitle}>spend wisely for better tomorrow</Text>
           </View>
         </View>
       </View>

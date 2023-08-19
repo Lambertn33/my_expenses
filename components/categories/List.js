@@ -11,7 +11,7 @@ const CategoriesList = ({ categories }) => {
       {pairs.map((pair, index) => (
         <View key={index} style={styles.row}>
           {pair.map((item) => {
-            return <CategoryItem category={item} />;
+            return <CategoryItem category={item} key={item.id}/>;
           })}
         </View>
       ))}
